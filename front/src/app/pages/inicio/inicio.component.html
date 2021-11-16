@@ -1,0 +1,25 @@
+<p-menubar >
+    <button pButton label="Logout" (click)="logout()" icon="pi pi-power-off"></button>
+</p-menubar>
+<div class="p-grid">
+    <div class="p-col-6 p-offset-3">
+        <p-card>
+            <div class="p-grid">
+                <div class="p-coll-4">
+                    <div class="p-fluid">
+                        <button pButton label="Botão 1" (click)="botao1()"></button>                    
+                    </div>
+                </div>
+                <div class="p-coll-4" style="margin-left: 10px;">
+                    <div class="p-fluid">                    
+                        <button pButton label="Botão 2" (click)="botao2()"></button>
+                    </div>
+                </div>
+                <div class="p-coll-4" style="margin-left: 10px;" *ngIf="relarioBlob">
+                    <button pButton  label="Download" (click)="download()" class="p-button-success"></button>
+                </div>
+            </div>
+        </p-card>
+        <p-messages  [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-messages>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<form [formGroup]="formulario" (submit)="false">
+
+  <div class="p-grid">
+    <div class="p-col-6 p-offset-3">
+      <p-card header="Login">
+        <div class="p-fluid">
+          <div class="p-field">
+            <label for="login">Login</label>
+            <input id="login" type="text" formControlName="login" pInputText />
+          </div>
+          <div class="p-field">
+            <label for="password">Senha</label>
+            <input id="password" type="password" formControlName="senha" pPassword />
+          </div>
+        </div>
+        <div class="p-fluid">
+          <button pButton (click)="realizarLogin()" label="ENTRAR NO SISTEMA"></button>
+        </div>
+      </p-card>
+      <p-messages  [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-messages>
+    </div>
+  </div>
+
+</form>
